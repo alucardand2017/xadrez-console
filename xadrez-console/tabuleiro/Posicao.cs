@@ -1,4 +1,6 @@
-﻿
+﻿using System;
+using tabuleiro;
+using xadrez;
 namespace tabuleiro
 {
     class Posicao

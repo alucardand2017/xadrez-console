@@ -1,5 +1,6 @@
-﻿
-
+﻿using System;
+using tabuleiro;
+using xadrez;
 namespace tabuleiro
 {
     class Peca
@@ -8,10 +9,9 @@ namespace tabuleiro
         public Cor Cor { get; protected set; }
         public int QteMovimento { get; set; }
         public Tabuleiro Tab { get; protected set; }
-
-        public Peca(Posicao posicao, Cor cor, Tabuleiro tab)
+        public Peca(Cor cor, Tabuleiro tab)
         {
-            Posicao = posicao;
+            Posicao = null;
             Cor = cor;
             QteMovimento = 0;
             Tab = tab;
