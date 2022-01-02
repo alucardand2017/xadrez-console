@@ -9,7 +9,6 @@ namespace xadrez
         public int Turno { get; private set; }
         public Cor JogadorAtual { get; private set; }
         public bool Terminada { get; private set; }
-
         public PartidaDeXadrez()
         {
             this.Tab = new Tabuleiro(8, 8);
@@ -17,7 +16,6 @@ namespace xadrez
             this.JogadorAtual = Cor.Branca;
             ColocarPecas();
         }
-
         public void ExecutaMovimento(Posicao origem, Posicao destino)
         {
             Peca p = Tab.RetirarPeca(origem);
@@ -25,7 +23,6 @@ namespace xadrez
             Peca pecaCapturada = Tab.RetirarPeca(destino);
             Tab.ColocarPeca(p, destino);
         }
-
         public void RealizaJogada(Posicao origem, Posicao destino)
         {
             ExecutaMovimento(origem, destino);
@@ -55,7 +52,6 @@ namespace xadrez
             else
                 JogadorAtual = Cor.Branca;
         }
-
         private void ColocarPecas()
         {
             Tab.ColocarPeca(new Torre(Cor.Branca, Tab), new PosicaoXadrez('c', 1).toPosicao());

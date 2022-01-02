@@ -8,10 +8,6 @@ namespace xadrez
         public Rei(Cor cor, Tabuleiro tab) : base(cor, tab)
         {
         }
-        public override string ToString()
-        {
-            return "R";
-        }
         private bool PodeMover(Posicao pos)
         {
             Peca p = Tab.Peca(pos);
@@ -62,6 +58,9 @@ namespace xadrez
                 mat[pos.Linha, pos.Coluna] = true;
             return mat;
         }
-       
+        public override string ToString()
+        {
+            return "R";
+        }
     }
 }
