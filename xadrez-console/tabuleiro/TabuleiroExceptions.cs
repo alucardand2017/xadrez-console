@@ -11,5 +11,8 @@ namespace tabuleiro
         public TabuleiroExceptions( string msg) : base(msg)
         {
         }
+        public TabuleiroExceptions(string msg , ConsoleColor color) : base(msg)
+        {
+        }
     }
 }
