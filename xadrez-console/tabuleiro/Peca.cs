@@ -8,6 +8,7 @@ namespace tabuleiro
         public Posicao Posicao { get; set; }
         public Cor Cor { get; protected set; }
         public int QteMovimento { get; set; }
+
         public Tabuleiro Tab { get; protected set; }
         public Peca(Cor cor, Tabuleiro tab)
         {
@@ -19,6 +20,10 @@ namespace tabuleiro
         public void IncrementarQteMovimentos()
         {
             QteMovimento++;
+        }
+        public void DecrementoQMovimentos()
+        {
+            QteMovimento--;
         }
 
         public bool ExisteMovimentosPossiveis()
