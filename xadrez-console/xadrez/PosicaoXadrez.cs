@@ -5,7 +5,6 @@ namespace xadrez
     {
         public char Coluna { get; set; }
         public int Linha { get; set; }
-
         public PosicaoXadrez(char coluna, int linha)
         {
             Coluna = coluna;

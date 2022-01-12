@@ -8,7 +8,6 @@ namespace tabuleiro
         public Posicao Posicao { get; set; }
         public Cor Cor { get; protected set; }
         public int QteMovimento { get; set; }
-
         public Tabuleiro Tab { get; protected set; }
         public Peca(Cor cor, Tabuleiro tab)
         {
@@ -25,7 +24,6 @@ namespace tabuleiro
         {
             QteMovimento--;
         }
-
         public bool ExisteMovimentosPossiveis()
         {
             bool[,] mat = MovimentosPossiveis();
@@ -39,9 +37,8 @@ namespace tabuleiro
             }
             return false;
         }
-
         public abstract bool[,] MovimentosPossiveis();
-        public bool PodeMoverPara(Posicao pos)
+        public bool MovimentoPossivel(Posicao pos)
         {
             return MovimentosPossiveis()[pos.Linha, pos.Coluna];
         }
