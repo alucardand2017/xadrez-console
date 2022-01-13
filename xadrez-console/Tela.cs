@@ -108,6 +108,5 @@ namespace xadrez_console
             int linha = int.Parse(s[1] + "");
             return new PosicaoXadrez(coluna, linha);
         }
-
     }
 }
